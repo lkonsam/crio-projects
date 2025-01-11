@@ -9,6 +9,7 @@ export async function fetchCountries(){
 
     } catch (error) {
         console.error("Error fetching data: ",error);
+        return [];
     }
 }
 export async function fetchStates(countryName){
@@ -18,6 +19,7 @@ export async function fetchStates(countryName){
 
     } catch (error) {
         console.error("Error fetching data: ",error);
+        return [];
     }
 }
 export async function fetchCities(countryName, stateName){
@@ -27,6 +29,7 @@ export async function fetchCities(countryName, stateName){
 
     } catch (error) {
         console.error("Error fetching data: ",error);
+        return [];
     }
 }
 

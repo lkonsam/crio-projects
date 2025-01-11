@@ -11,10 +11,10 @@ export default function Home() {
     cities: "",
   });
 
-  function fetchData(key, callback) {
-    callback().then((response) =>
-      setData((prev) => ({ ...prev, [key]: response }))
-    );
+  async function fetchData(key, callback) {
+    const response = await callback();
+    // console.log(response);
+    setData((prev) => ({ ...prev, [key]: response }))
   }
 
   function inputHandler(event) {
