@@ -18,41 +18,43 @@ export default function Home() {
     setSubmitName(true);
   };
 
-  
-
   return (
-    <form onSubmit={submitHandler} className={styles.form}>
-      <h1>Full Name Display</h1>
-      <div>
-        <label>
-          First Name:
-          <input
-            type="text"
-            name="first_name"
-            value={formData.first_name}
-            onChange={inputHandler}
-            required
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          Last Name:
-          <input
-            type="text"
-            name="last_name"
-            value={formData.last_name}
-            onChange={inputHandler}
-            required
-          />
-        </label>
-      </div>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-      { submitName &&   (<p>Full Name: {formData.first_name} {formData.last_name}</p>)}
-    </form>
+    <>
+      <form onSubmit={submitHandler} className={styles.form}>
+        <h1>Full Name Display</h1>
+        <div>
+          <label>
+            First Name:
+            <input
+              type="text"
+              name="first_name"
+              value={formData.first_name}
+              onChange={inputHandler}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Last Name:
+            <input
+              type="text"
+              name="last_name"
+              value={formData.last_name}
+              onChange={inputHandler}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      {submitName && (
+        <p>
+          Full Name: {formData.first_name} {formData.last_name}
+        </p>
+      )}
+    </>
   );
-
-
 }
