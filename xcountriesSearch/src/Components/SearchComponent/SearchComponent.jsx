@@ -3,7 +3,7 @@ import styles from "./SearchComponent.module.css";
 
 export default function SearchComponent({ countries, setFilterCountries }) {
   const [search, setSearch] = useState("");
-  const [debounce, setDebounce] = useState(null);
+  // const [debounce, setDebounce] = useState(null);
 
   const searchFunction = (searchValue) => {
     setFilterCountries(
