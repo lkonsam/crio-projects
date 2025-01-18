@@ -1,0 +1,11 @@
+.input {
+    min-width: 50vw;
+    padding: 5px;
+}
+
+.inputWrapper {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 2px 4px #efefef; 
+}
