@@ -6,7 +6,7 @@ export default function CardComponent({data}){
 
 
     return (<>
-        <div className={styles.card}>
+        <div className={styles.countryCard}>
             <img src={data.png} alt={data.common}  className={styles.image} />
             <p className={styles.countryText}>{data.common}</p>
         </div>
