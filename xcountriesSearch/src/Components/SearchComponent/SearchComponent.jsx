@@ -5,27 +5,35 @@ export default function SearchComponent({ countries, setFilterCountries }) {
   const [search, setSearch] = useState("");
   const [debounce, setDebounce] = useState(null);
 
-  const debounceSearch = (event) => {
-    const searchValue = event.target.value; 
-    setSearch(searchValue); 
-  
-    if (debounce) {
-      clearTimeout(debounce); 
-    }
-  
-    setDebounce(
-      setTimeout(() => {
-        setFilterCountries(
-          searchValue.trim() === ""
-            ? countries 
-            : countries.filter((country) =>
-                country.common.toLowerCase().includes(searchValue.toLowerCase())
-              )
-        );
-      }, 500)
+  const searchFunction = (searchValue) => {
+    setFilterCountries(
+      searchValue.trim() === ""
+        ? countries
+        : countries.filter((country) =>
+            country.common.toLowerCase().includes(searchValue.toLowerCase())
+          )
     );
   };
-  
+
+  // const debounceSearch = (event) => {
+  //   const searchValue = event.target.value;
+  //   setSearch(searchValue);
+
+  //   if (debounce) {
+  //     clearTimeout(debounce);
+  //   }
+
+  //   setDebounce(
+  //     setTimeout(() => {
+  //       searchFunction(searchValue)
+  //     }, 500)
+  //   );
+  // };
+  const debounceSearch = (event) => {
+    const searchValue = event.target.value;
+    setSearch(searchValue);
+    searchFunction(searchValue);
+  };
 
   return (
     <>
