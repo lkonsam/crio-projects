@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_END_POINT = `https://geektrust.s3-ap-southeast-1.amazonaws.com`;
+const API_END_POINT = `https://geektrust.s3-ap-southeast-1.amazonaws.com1`;
 
 export async function fetchEmployee(){
     try {
@@ -9,7 +9,8 @@ export async function fetchEmployee(){
         return response.data;
 
     } catch (error) {
-        console.error("Error fetching data: ",error);
+        // console.error("Error fetching data: ",error);
+        alert('failed to fetch data');
         return [];
     }
 }

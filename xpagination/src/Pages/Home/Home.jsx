@@ -6,7 +6,7 @@ export default function Home() {
   const [employeeList, setEmployeeList] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [pageData, setPageData] = useState([]);
-  const itemPerPage = 5;
+  const itemPerPage = 10;
 
   useEffect(() => {
     const response = fetchEmployee();
@@ -52,14 +52,15 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {pageData.map((employee) => (
+          { employeeList.length>0 ?   pageData.map((employee) => (
             <tr key={employee.id} className={styles.tableTr}>
               <td>{employee.id}</td>
               <td>{employee.name}</td>
               <td>{employee.email}</td>
               <td>{employee.role}</td>
             </tr>
-          ))}
+          ))
+        : <tr><td colSpan="4">failed to fetch data</td></tr>}
         </tbody>
       </table>
       <div className={styles.paginationWrapper}>
