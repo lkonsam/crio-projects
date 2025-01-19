@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_END_POINT = `https://geektrust.s3-ap-southeast-1.amazonaws.com1`;
+const API_END_POINT = `https://geektrust.s3-ap-southeast-1.amazonaws.com`;
 
 export async function fetchEmployee(){
     try {
