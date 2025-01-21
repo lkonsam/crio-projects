@@ -1,39 +1,12 @@
 body {
-    margin: 0;
-    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  :root{
-    --color-primary: #007bff;
-    --color-secondary: #6c757d;
-    --color-tertiary: #f8f9fa;
-    --color-quaternary: #fff;
-    --color-quinary: #343a40;
-    --color-success: #28a745;
-    --color-warning: #ffc107;
-    --color-danger: #dc3545;
-    --color-info: #17a2b8;
-    --color-light: #f8f9fa;
-    --color-dark: #343a40;
-    --color-gray-100: #f9f9f9;
-    --color-gray-200: #f3f3f3;
-    --color-theme: #2AA7FF;
-
-  }
-
-  .flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }

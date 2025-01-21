@@ -1,0 +1,28 @@
+.logo {
+  gap: 4px;
+  width: 92px;
+  height: 27px;
+}
+
+.imgWrapper {
+  background-color: var(--color-theme);
+  width: 23px;
+  height: 23.02px;
+  border-radius: 5px;
+  object-fit: fill;
+}
+
+.logoImg {
+  width: 10.86px;
+  height: 11.12px;
+}
+
+.logoText {
+  color: var(--color-theme);
+  width: 65px;
+  height: 27px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0.02em;
+}

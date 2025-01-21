@@ -5,6 +5,26 @@
   --secondary-bg-color: #9b9b9b;
   --font-heading: "Ubuntu", sans-serif;
   --font-body: "Open Sans", sans-serif;
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-tertiary: #f8f9fa;
+  --color-quaternary: #fff;
+  --color-quinary: #343a40;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-info: #17a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-gray-100: #f9f9f9;
+  --color-gray-200: #f3f3f3;
+  --color-theme: #2aa7ff;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 *,
@@ -71,4 +91,16 @@ button {
 p,
 a {
   font-family: var(--font-body);
+}
+
+button {
+  background-color: var(--color-theme);
+  border-radius: 8px;
+  color: #fff;
+  border: 0;
+  padding: 0.25rem 0.75rem;
+}
+
+.text-secondary {
+  color: var(--color-secondary);
 }

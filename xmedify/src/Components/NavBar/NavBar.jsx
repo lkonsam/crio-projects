@@ -1,14 +1,38 @@
 import React from "react";
 import styles from "./NavBar.module.css";
+import Logo from "../Logo/Logo";
 
 export default function NavBar() {
   return (
     <>
-      <p className={`${styles.topText} flex-center`}>
-        The health and well-being of our patients and their health care team
-        will always be our priority, so we follow the best practices for
-        cleanliness.
-      </p>
+      <div className={styles.NavBar}>
+        <Logo />
+        <ul>
+          <li>
+            <a href="/">Find Doctors</a>
+          </li>
+          <li>
+            <a href="/about">Hospitals</a>
+          </li>
+          <li>
+            <a href="/contact">Medicines</a>
+          </li>
+          <li>
+            <a href="/contact">Surgeries</a>
+          </li>
+          <li>
+            <a href="/contact">Software for Provider</a>
+          </li>
+          <li>
+            <a href="/contact">Facilities</a>
+          </li>
+          <li>
+            <a href="/contact">
+              <button>My Bookings</button>
+            </a>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }

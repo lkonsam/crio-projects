@@ -1,0 +1,24 @@
+.header {
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+  padding: 0 4rem;
+}
+
+.hero {
+  display: flex;
+}
+
+.hero > div {
+  width: 50%;
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+.centerText {
+  color: var(--color-theme);
+}
