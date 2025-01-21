@@ -3,16 +3,74 @@
   justify-content: space-between;
   align-items: center;
   height: 96px;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1000;
 }
 
 .NavBar ul {
   list-style: none;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem 1rem;
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: left 0.3s ease-in-out; /* Smooth slide-in effect */
 }
 
-.NavBar a {
-  color: #102851;
+.NavBar ul li {
+  font-size: 1.2rem;
+}
+
+.NavBar ul a {
+  color: #fff;
   text-decoration: none;
+}
+
+.NavBar ul a:hover {
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #102851;
+}
+
+.NavBar.open ul {
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .NavBar ul {
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    gap: 1rem;
+    left: 0;
+    height: auto;
+    width: auto;
+    padding: 0;
+  }
+
+  .NavBar ul a {
+    color: #102851;
+  }
+
+  .menu-toggle {
+    display: none; /* Hide toggle button for desktop */
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 }

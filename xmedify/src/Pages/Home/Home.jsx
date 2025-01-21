@@ -28,6 +28,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={styles.searchCityWrapper}>
+        {/* Search input and some icon here */}
+      </div>
+      <div className={styles.findSpecialisationWrapper}>
+        <h1>Find By Specialisation</h1>
+      </div>
     </>
   );
 }
