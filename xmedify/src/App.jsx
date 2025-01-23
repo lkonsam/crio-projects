@@ -1,14 +1,17 @@
 import React from "react";
-import "./App.css";
 import { SnackbarProvider } from "notistack";
-import Home from "./Pages/Home/Home";
+import { Outlet } from "react-router-dom";
+import { CssBaseline } from "@mui/material";
+import Footer from "./Components/Footer/Footer";
+import DownloadApp from "./Components/Sections/DownloadApp/DownloadApp";
 
 export default function App() {
   return (
     <SnackbarProvider>
-      <div className="App">
-        <Home />
-      </div>
+      <CssBaseline />
+      <Outlet />
+      <DownloadApp />
+      <Footer />
     </SnackbarProvider>
   );
 }
