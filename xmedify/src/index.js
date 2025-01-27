@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Home from "./Pages/Home/Home";
 import Search from "./Pages/Search/Search";
-// import MyBookings from "./Pages/MyBookings/MyBookings";
+import MyBookings from "./Pages/MyBookings/MyBookings";
 
 const router = createBrowserRouter([
   {
@@ -17,10 +17,10 @@ const router = createBrowserRouter([
         path: "search",
         element: <Search />,
       },
-      // {
-      //   path: "my-bookings",
-      //   element: <MyBookings />,
-      // },
+      {
+        path: "my-bookings",
+        element: <MyBookings />,
+      },
       {
         path: "/",
         element: <Home />,

@@ -24,6 +24,17 @@ export default function SmsForm() {
           sx={{
             border: "1px solid #F0F0F0",
             flex: 1,
+            "& input[type=number]": {
+              "-moz-appearance": "textfield",
+              "-webkit-appearance": "none",
+              margin: 0,
+            },
+            "& input[type=number]::-webkit-inner-spin-button": {
+              "-webkit-appearance": "none",
+            },
+            "& input[type=number]::-webkit-outer-spin-button": {
+              "-webkit-appearance": "none",
+            },
           }}
           placeholder="Enter phone number"
           InputProps={{
@@ -31,6 +42,10 @@ export default function SmsForm() {
               <InputAdornment position="start">+91</InputAdornment>
             ),
           }}
+          onInput={(e) => {
+            e.target.value = e.target.value.slice(0, 10);
+          }}
+          type="number"
           required
         />
         <Button type="submit" size="large" variant="contained" disableElevation>

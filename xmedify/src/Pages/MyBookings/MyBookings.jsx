@@ -1,11 +1,11 @@
 import { Box, Typography, Container, Stack } from "@mui/material";
-import HospitalCard from "../../../components/HospitalCard/HospitalCard";
 import { useEffect, useState } from "react";
-import cta from "../assets/cta.png";
-import SearchBar from "../../../components/SearchBar/SearchBar";
-import NavBar from "../../../components/NavBar/NavBar";
+import NavBar from "../../Components/NavBar/NavBar";
+import SearchBar from "../../Components/SearchBar/SearchBar";
+import HospitalCard from "../../Components/HospitalCard/HospitalCard";
 
 export default function MyBookings() {
+  const cta = "/Images/cta.png";
   const [bookings, setBookings] = useState([]);
   const [filteredBookings, setFilteredBookings] = useState([]);
 
@@ -83,14 +83,14 @@ export default function MyBookings() {
                   />
                 ))}
 
-              {filteredBookings.length == 0 && (
+              {filteredBookings.length === 0 && (
                 <Typography variant="h3" bgcolor="#fff" p={3} borderRadius={2}>
                   No Bookings Found!
                 </Typography>
               )}
             </Stack>
 
-            <img src={cta} width={360} height="auto" />
+            <img src={cta} width={360} alt="" height="auto" />
           </Stack>
         </Container>
       </Box>
