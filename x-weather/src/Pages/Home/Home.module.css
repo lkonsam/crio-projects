@@ -1,0 +1,30 @@
+.home {
+  background-color: #f0f8ff;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.inputWrapper {
+  padding-top: 30vh;
+}
+
+.input {
+  height: 30px;
+  width: 50vw;
+}
+
+.searchBtn {
+  background-color: green;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.detailWrapper {
+  padding-top: 2rem;
+  display: flex;
+  justify-self: center;
+  gap: 2rem;
+}
