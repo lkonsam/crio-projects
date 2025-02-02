@@ -55,7 +55,7 @@ export default function Home() {
             </button>
           </form>
         </div>
-        <div className={styles.detailWrapper}>
+        <div className={`${styles.detailWrapper} weather-cards`}>
           {loading && <p>Loading data...</p>}
           {!loading && weatherData && (
             <>
